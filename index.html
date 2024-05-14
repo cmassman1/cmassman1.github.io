@@ -65,6 +65,13 @@
             float: left; /* Float the image to the left */
             margin-right: 20px; /* Add some space between the image and the paragraph */
         }
+
+        /* Clear float */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
     </style>
 </head>
 <body>
@@ -79,11 +86,13 @@
     <!-- Add your image -->
     <img class="profile-image" src="IMG_7732.jpg" alt="Katie Massman" width="200" height="300">
     
-    <!-- Additional paragraph -->
-    <p class="description">Hey there! I'm a rising junior at the University of Notre Dame, majoring in Computer Science and with a minor in digital marketing. I have taken classes in Data Structures, Systems Programming, Logic Design, Discrete Mathmatics and Linear Algebra. Right now, I'm eager to continue learning and grow professionally. I'm on the lookout for full-time roles in Fullstack or Backend development within a dynamic environment that thrives on tackling new challenges.</p>
+    <!-- Welcome message -->
+    <p>Welcome to my website! <span class="typewriter-text"></span></p>
 
-    <!-- Typewriter animation -->
-    <p><span class="typewriter-text"></span></p>
+    <!-- Additional paragraph -->
+    <div class="clearfix">
+        <p class="description">Hey there! I'm a rising junior at the University of Notre Dame, majoring in Computer Science and with a minor in digital marketing. I have taken classes in Data Structures, Systems Programming, Logic Design, Discrete Mathmatics and Linear Algebra. Right now, I'm eager to continue learning and grow professionally. I'm on the lookout for full-time roles in Fullstack or Backend development within a dynamic environment that thrives on tackling new challenges.</p>
+    </div>
 
     <script>
         // JavaScript to type out the text "Welcome to my website"
