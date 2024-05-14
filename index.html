@@ -86,15 +86,7 @@
             margin-bottom: 20px; /* Add margin below the image */
         }
 
-        /* Clear floating elements */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Add some space between image and paragraph on larger screens */
-        @media (min-width: 768px) {
+        /* Additional paragraph */
         .description {
             margin-top: 0;
             text-align: left;
@@ -105,7 +97,20 @@
             width: calc(50% - 420px); /* Adjust the width to fit next to the image */
             max-width: 600px; /* Set a maximum width for the paragraph */
         }
+
+        /* Clear floating elements */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
+        /* Add some space between image and paragraph on larger screens */
+        @media (min-width: 768px) {
+            .description {
+                margin-top: 0;
+            }
+        }
+
     </style>
 </head>
 <body>
