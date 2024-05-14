@@ -11,39 +11,15 @@
             padding: 0;
             font-family: 'Courier New', Courier, monospace; /* Change font to monospace */
             background-color: lightblue; /* Change the background color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        /* Left align text */
-        h1, .description {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            text-align: left;
-        }
-
-        /* Style for the header */
-        h1 {
-            font-size: 40px; /* Larger font size for header */
-        }
-
-        /* Increase width of paragraph text */
-        .description-container {
-            width: calc(80% - 96px); /* Make text a little longer */
-            background-color: lightyellow; /* Add background color to paragraphs */
-            padding: 10px; /* Add padding to paragraphs */
-            font-size: 18px; /* Larger font size for paragraphs */
-            margin-right: 1in; /* Move text an inch away from the photo */
-            margin: auto;
         }
 
         /* Style for navigation menu */
         nav {
-            margin-bottom: 20px; /* Add some space below the navigation menu */
+            position: fixed;
+            top: 20px;
+            right: 20px;
             text-align: right; /* Align links to the right */
+            z-index: 1000;
         }
 
         nav ul {
@@ -58,6 +34,18 @@
             margin-right: 20px;
         }
 
+        /* Center the main content */
+        .main-content {
+            text-align: center;
+            margin-top: 100px; /* Adjust as needed */
+        }
+
+        /* Style for the header */
+        h1 {
+            font-size: 40px; /* Larger font size for header */
+            margin-top: 0;
+        }
+
         /* Typewriter animation */
         .typewriter-text {
             overflow: hidden; /* Ensures the text is hidden when it's too long */
@@ -68,17 +56,27 @@
 
         /* Image styling */
         .profile-image {
-            width: 300px; /* Make the image larger */
+            width: 200px; /* Make the image smaller */
             height: auto; /* Maintain aspect ratio */
-            margin: auto;
-            display: block;
         }
 
-        /* Clear float */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
+        /* Additional paragraph */
+        .description {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Add some space between image and paragraph */
+        @media (min-width: 768px) {
+            .profile-image {
+                margin-right: 20px;
+            }
+            .description {
+                margin-top: 0;
+            }
         }
     </style>
 </head>
@@ -89,18 +87,18 @@
             <li><a href="about.html">experience</a></li> <!-- Link to the about page -->
         </ul>
     </nav>
-    <h1>katie massman</h1> <!-- Make text lowercase -->
-    
-    <!-- Welcome message -->
-    <p><span class="typewriter-text"></span></p>
+    <div class="main-content">
+        <h1>katie massman</h1> <!-- Make text lowercase -->
+        
+        <!-- Welcome message -->
+        <p><span class="typewriter-text"></span></p>
 
-    <!-- Add your image -->
-    <img class="profile-image" src="IMG_7732.jpg" alt="Katie Massman" width="200" height="300">
-    
-    <!-- Additional paragraph -->
-    <div class="clearfix">
-        <div class="description-container">
-            <p class="description">hey there! i'm a rising junior at the university of notre dame, majoring in computer science with a minor in digital marketing. i have taken classes in data structures, systems programming, computer architecture, discrete mathmatics and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for internship roles in fullstack or frontend development within a dynamic environment that thrives on tackling new challenges.</p>
+        <!-- Add your image -->
+        <img class="profile-image" src="IMG_7732.jpg" alt="Katie Massman">
+        
+        <!-- Additional paragraph -->
+        <div class="description">
+            <p>Hey there! I'm a rising junior at the University of Notre Dame, majoring in computer science with a minor in digital marketing. I have taken classes in data structures, systems programming, computer architecture, discrete mathematics, and linear algebra. Right now, I'm eager to continue learning and grow professionally. I'm on the lookout for internship roles in full-stack or front-end development within a dynamic environment that thrives on tackling new challenges.</p>
         </div>
     </div>
 
@@ -128,3 +126,4 @@
     </script>
 </body>
 </html>
+
