@@ -38,9 +38,6 @@
         .main-content {
             text-align: center;
             margin-top: 100px; /* Adjust as needed */
-            max-width: 800px; /* Set a maximum width for the container */
-            margin-left: auto; /* Center the container horizontally */
-            margin-right: auto;
         }
 
         /* Style for the header */
@@ -75,13 +72,13 @@
         }
 
         /* Image styling */
-        /* Image styling */
         .profile-image {
             width: 400px; /* Make the image larger */
             height: auto; /* Maintain aspect ratio */
-            float: left; /* Float the image to the left */
             margin-right: 20px; /* Reduce space between image and paragraph */
             margin-bottom: 20px; /* Add margin below the image */
+            display: inline-block; /* Set display to inline-block */
+            vertical-align: top; /* Align the image to the top of the line */
         }
 
         /* Additional paragraph */
@@ -90,7 +87,9 @@
             text-align: left;
             background-color: lightyellow; /* Add background color to the paragraph */
             padding: 5px; /* Reduce padding to minimize space */
-            float: left; /* Float the paragraph to the left */
+            display: inline-block; /* Set display to inline-block */
+            vertical-align: top; /* Align the paragraph to the top of the line */
+            width: calc(50% - 420px); /* Adjust the width to fit next to the image */
         }
 
         /* Clear floating elements */
@@ -131,4 +130,3 @@
     </div>
 </body>
 </html>
-
