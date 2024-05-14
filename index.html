@@ -54,12 +54,15 @@
             padding-right: 3px; /* Add padding to ensure cursor is visible */
             background-color: lightyellow; /* Add background color to typewriter text */
             display: inline-block;
+            margin-bottom: 20px; /* Add margin below the typewriter text */
         }
 
         /* Image styling */
         .profile-image {
             width: 200px; /* Make the image smaller */
             height: auto; /* Maintain aspect ratio */
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Add some space between image and paragraph */
         }
 
         /* Additional paragraph */
@@ -69,13 +72,12 @@
             max-width: 50%;
             margin-left: auto;
             margin-right: auto;
+            background-color: lightyellow; /* Add background color to the paragraph */
+            padding: 10px; /* Add padding to the paragraph */
         }
 
         /* Add some space between image and paragraph */
         @media (min-width: 768px) {
-            .profile-image {
-                margin-right: 20px;
-            }
             .description {
                 margin-top: 0;
             }
