@@ -16,7 +16,7 @@
         }
 
         /* Left align text */
-        h1, p, .description {
+        h1, .description {
             margin-top: 0.5em;
             margin-bottom: 0.5em;
             text-align: left;
@@ -24,12 +24,15 @@
 
         /* Style for the header */
         h1 {
-            font-size: 36px; /* Larger font size */
+            font-size: 40px; /* Larger font size for header */
         }
 
         /* Increase width of paragraph text */
         p, .description {
             width: 80%; /* Make text a little longer */
+            background-color: lightyellow; /* Add background color to paragraphs */
+            padding: 10px; /* Add padding to paragraphs */
+            font-size: 18px; /* Larger font size for paragraphs */
         }
 
         /* Style for navigation menu */
@@ -58,16 +61,12 @@
             padding-right: 3px; /* Add padding to ensure cursor is visible */
         }
 
-        /* Blinking cursor animation */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange }
-        }
-
         /* Image styling */
         .profile-image {
             float: left; /* Float the image to the left */
             margin-right: 20px; /* Add some space between the image and the paragraph */
+            width: 300px; /* Make the image larger */
+            height: auto; /* Maintain aspect ratio */
         }
 
         /* Clear float */
@@ -121,4 +120,5 @@
         type();
     </script>
 </body>
-</html> 
+</html>
+
