@@ -77,8 +77,8 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">home</a></li> <!-- Change Home to Main -->
-            <li><a href="about.html">experience</a></li> <!-- Link to the about page -->
+            <li><a href="index.html">main</a></li> <!-- Change Home to Main -->
+            <li><a href="about.html">about</a></li> <!-- Link to the about page -->
         </ul>
     </nav>
     <h1>katie massman</h1> <!-- Make text lowercase -->
@@ -91,7 +91,7 @@
     
     <!-- Additional paragraph -->
     <div class="clearfix">
-        <p class="description">hey there! i'm a rising junior at the university of notre dame, majoring in computer science with a minor in digital marketing. i have taken classes in data structures, systems programming, computer architecture, theory of computing and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for internship roles in fullstack or frontend development within a dynamic environment that thrives on tackling new challenges.</p>
+        <p class="description">hey there! i'm a rising junior at the university of notre dame, majoring in computer science and with a minor in digital marketing. i have taken classes in data structures, systems programming, logic design, discrete mathmatics and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for full-time roles in fullstack or backend development within a dynamic environment that thrives on tackling new challenges.</p>
     </div>
 
     <script>
@@ -106,8 +106,10 @@
                     textContainer.textContent += text.charAt(index);
                     index++;
                 } else {
-                    textContainer.textContent = ''; // Reset text container
-                    index = 0;
+                    setTimeout(function() {
+                        textContainer.textContent = ''; // Reset text container
+                        index = 0;
+                    }, 2000); // Delay before resetting
                 }
             }, 100); // Adjust the typing speed (in milliseconds)
         }
@@ -116,3 +118,4 @@
     </script>
 </body>
 </html>
+
