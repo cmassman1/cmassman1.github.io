@@ -15,7 +15,7 @@
         }
 
         /* Left align text */
-        h1, p {
+        h1, p, .description {
             text-align: left;
         }
 
@@ -25,8 +25,8 @@
         }
 
         /* Increase width of paragraph text */
-        p {
-            width: 80%; /* Make text a little longer */
+        p, .description {
+            width: 50%; /* Make text a little longer */
         }
 
         /* Style for navigation menu */
@@ -59,6 +59,12 @@
             from, to { border-color: transparent }
             50% { border-color: orange }
         }
+
+        /* Image styling */
+        .profile-image {
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Add some space between the image and the paragraph */
+        }
     </style>
 </head>
 <body>
@@ -72,7 +78,10 @@
     <p>Welcome to my website! <span class="typewriter-text"></span></p> <!-- Add typewriter effect -->
     
     <!-- Add your image -->
-    <img src="IMG_7732.jpg" alt="Katie Massman" width="200" height="300">
+    <img class="profile-image" src="IMG_7732.jpg" alt="Katie Massman" width="200" height="300">
+    
+    <!-- Additional paragraph -->
+    <p class="description">Hey there! I'm a rising junior at the University of Notre Dame, majoring in Computer Science and with a minor in digital marketing. I have taken classes in Data Structures, Systems Programming, Logic Design, Discrete Mathmatics and Linear Algebra. Right now, I'm eager to continue learning and grow professionally. I'm on the lookout for full-time roles in Fullstack or Backend development within a dynamic environment that thrives on tackling new challenges.</p>
 
     <script>
         // JavaScript to type out the text "Welcome to my website"
