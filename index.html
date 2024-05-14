@@ -52,6 +52,8 @@
             white-space: nowrap; /* Prevents text from wrapping */
             border-right: .15em solid orange; /* Add a border to simulate cursor */
             padding-right: 3px; /* Add padding to ensure cursor is visible */
+            background-color: lightyellow; /* Add background color to typewriter text */
+            display: inline-block;
         }
 
         /* Image styling */
@@ -91,7 +93,7 @@
         <h1>katie massman</h1> <!-- Make text lowercase -->
         
         <!-- Welcome message -->
-        <p><span class="typewriter-text"></span></p>
+        <p><span class="typewriter-text">welcome to my website</span></p>
 
         <!-- Add your image -->
         <img class="profile-image" src="IMG_7732.jpg" alt="Katie Massman">
@@ -101,29 +103,5 @@
             <p>Hey there! I'm a rising junior at the University of Notre Dame, majoring in computer science with a minor in digital marketing. I have taken classes in data structures, systems programming, computer architecture, discrete mathematics, and linear algebra. Right now, I'm eager to continue learning and grow professionally. I'm on the lookout for internship roles in full-stack or front-end development within a dynamic environment that thrives on tackling new challenges.</p>
         </div>
     </div>
-
-    <script>
-        // JavaScript to continuously type out the text "Welcome to my website"
-        var text = "welcome to my website";
-        var textContainer = document.querySelector('.typewriter-text');
-
-        function type() {
-            var index = 0;
-            setInterval(function() {
-                if (index < text.length) {
-                    textContainer.textContent += text.charAt(index);
-                    index++;
-                } else {
-                    setTimeout(function() {
-                        textContainer.textContent = ''; // Reset text container
-                        index = 0;
-                    }, 2000); // Delay before resetting
-                }
-            }, 100); // Adjust the typing speed (in milliseconds)
-        }
-
-        type();
-    </script>
 </body>
 </html>
-
