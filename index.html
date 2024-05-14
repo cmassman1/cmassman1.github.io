@@ -10,9 +10,12 @@
             margin: 0;
             padding: 0;
             font-family: 'Courier New', Courier, monospace; /* Change font to monospace */
-            margin-left: 1in; /* Shift everything about an inch to the right */
-            margin-right: 1in;
             background-color: lightblue; /* Change the background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
         }
 
         /* Left align text */
@@ -34,6 +37,7 @@
             padding: 10px; /* Add padding to paragraphs */
             font-size: 18px; /* Larger font size for paragraphs */
             margin-right: 1in; /* Move text an inch away from the photo */
+            margin: auto;
         }
 
         /* Style for navigation menu */
@@ -64,10 +68,10 @@
 
         /* Image styling */
         .profile-image {
-            float: left; /* Float the image to the left */
-            margin-right: 1in; /* Add a full inch margin between the image and the paragraph */
             width: 300px; /* Make the image larger */
             height: auto; /* Maintain aspect ratio */
+            margin: auto;
+            display: block;
         }
 
         /* Clear float */
