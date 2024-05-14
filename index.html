@@ -36,12 +36,22 @@
 </head>
 <body>
     <h1 style="text-align: center;">Katie Massman</h1>
-    <p style="text-align: center;"><span class="typewriter-text">Welcome to my website!</span></p>
+    <p style="text-align: center;"><span class="typewriter-text">Welcome to my website </span></p>
     
     <!-- Add your image -->
-    <img src="IMG_7732.jpg" alt="Katie Massman" width="200" height="250" style="display: block; margin: 0 auto;">
+    <img src="IMG_7732.jpg" alt="Katie Massman" width="200" height="300" style="display: block; margin: 0 auto;">
     
     <!-- Other content of your webpage goes here -->
     
+    <script>
+        // JavaScript to append the remaining text after animation completes
+        window.onload = function() {
+            var textContainer = document.querySelector('.typewriter-text');
+            var remainingText = "Katie Massman.";
+            setTimeout(function() {
+                textContainer.textContent += remainingText;
+            }, 6000); // 6000ms is the duration of the typing animation
+        };
+    </script>
 </body>
 </html>
