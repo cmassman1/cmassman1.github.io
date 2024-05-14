@@ -95,9 +95,16 @@
 
         /* Add some space between image and paragraph on larger screens */
         @media (min-width: 768px) {
-            .description {
-                margin-top: 0;
-            }
+        .description {
+            margin-top: 0;
+            text-align: left;
+            padding: 20px; /* Add padding for better readability */
+            background-color: lightyellow; /* Add background color to the paragraph */
+            display: inline-block; /* Set display to inline-block */
+            vertical-align: top; /* Align the paragraph to the top of the line */
+            width: calc(50% - 420px); /* Adjust the width to fit next to the image */
+            max-width: 600px; /* Set a maximum width for the paragraph */
+        }
         }
     </style>
 </head>
