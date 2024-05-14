@@ -59,22 +59,20 @@
 
         /* Image styling */
         .profile-image {
-            width: 200px; /* Make the image smaller */
+            width: 400px; /* Make the image larger */
             height: auto; /* Maintain aspect ratio */
-            position: relative; /* Enable positioning */
-            right: 2in; /* Move the image to the right by two inches */
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Add some space between image and paragraph */
         }
-
         /* Additional paragraph */
         .description {
-            margin-top: 20px;
+            margin-top: 0;
             text-align: left;
-            max-width: 50%;
-            position: right; /* Enable positioning */
+            max-width: calc(50% - 220px); /* Calculate the maximum width for the paragraph */
             background-color: lightyellow; /* Add background color to the paragraph */
             padding: 10px; /* Add padding to the paragraph */
+            float: right; /* Float the paragraph to the right */
         }
-
 
         /* Add some space between image and paragraph */
         @media (min-width: 768px) {
