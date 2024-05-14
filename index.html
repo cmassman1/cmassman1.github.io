@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto Mono', monospace;
+            margin-left: 1in; /* Shift everything about an inch to the right */
         }
 
         /* Typewriter animation */
@@ -34,12 +35,17 @@
 
         /* Style for the header */
         h1 {
-            font-size: 36px; /* Larger font size */
+            font-size: 48px; /* Larger font size */
+        }
+
+        /* Increase width of paragraph text */
+        p {
+            width: 80%; /* Make text a little longer */
         }
     </style>
 </head>
 <body>
-    <h1>katie massman</h1>
+    <h1>Katie Massman</h1>
     <p><span class="typewriter-text"></span></p>
     
     <!-- Add your image -->
@@ -49,7 +55,7 @@
     
     <script>
         // JavaScript to type out the text
-        var text = "welcome to my website";
+        var text = "Welcome to my website";
         var textContainer = document.querySelector('.typewriter-text');
         var index = 0;
 
