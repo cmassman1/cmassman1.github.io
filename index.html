@@ -3,66 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catherine “Katie” Massman's Resume</title>
+    <title>Home</title>
     <style>
         /* Remove extra white space and set font */
         body {
-            margin-left: 1in; /* Shift everything about an inch to the right */
-            margin-right: 1in; /* Shift everything about an inch to the left */
+            margin: 0;
             padding: 0;
             font-family: 'Courier New', Courier, monospace; /* Change font to monospace */
+            margin-left: 1in; /* Shift everything about an inch to the right */
+            margin-right: 1in;
             background-color: lightblue; /* Change the background color */
-            font-size: 18px; /* Increase font size for all text */
         }
-        h1, h2, h3, p {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            text-transform: lowercase; /* Convert text to lowercase */
+
+        /* Left align text */
+        h1, p, .description {
+            text-align: left;
         }
+
+        /* Style for the header */
         h1 {
-            font-size: 48px; /* Increase font size for the title */
+            font-size: 36px; /* Larger font size */
         }
-        .section {
-            border: 2px solid black;
-            padding: 10px;
-            margin-top: 0.5em;
-            margin-bottom: 20px;
-            background-color: #f0f0f0;
+
+        /* Increase width of paragraph text */
+        p, .description {
+            width: 80%; /* Make text a little longer */
         }
-        .education {
-            background-color: #ffcccc;
-        }
-        .leadership {
-            background-color: #ccffcc;
-        }
-        .experience {
-            background-color: #ccccff;
-        }
-        .related {
-            background-color: #ffffcc;
-        }
-        .skills {
-            background-color: #ccffff;
-        }
+
+        /* Style for navigation menu */
         nav {
-            margin-top: 0.5em;
             margin-bottom: 20px; /* Add some space below the navigation menu */
             text-align: right; /* Align links to the right */
         }
+
+        nav ul {
+            list-style-type: none; /* Remove bullet points from list */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+        }
+
+        nav ul li {
+            display: inline; /* Display list items horizontally */
+            margin-left: 20px; /* Add some space between list items */
+            margin-right: 20px;
+        }
+
+        /* Typewriter animation */
+        .typewriter-text {
+            overflow: hidden; /* Ensures the text is hidden when it's too long */
+            white-space: nowrap; /* Prevents text from wrapping */
+            border-right: .15em solid orange; /* Add a border to simulate cursor */
+            padding-right: 3px; /* Add padding to ensure cursor is visible */
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
+        }
+
+        /* Image styling */
         .profile-image {
-            width: 300px; /* Make the photo larger */
-            height: auto; /* Maintain aspect ratio */
+            float: left; /* Float the image to the left */
+            margin-right: 20px; /* Add some space between the image and the paragraph */
+        }
+
+        /* Clear float */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">home</a></li>
+            <li><a href="index.html">home</a></li> <!-- Change Home to Main -->
+            <li><a href="about.html">experience</a></li> <!-- Link to the about page -->
         </ul>
     </nav>
+    <h1>katie massman</h1> <!-- Make text lowercase -->
+    
+    <!-- Welcome message -->
+    <p><span class="typewriter-text"></span></p>
 
-    <!-- Content here -->
+    <!-- Add your image -->
+    <img class="profile-image" src="IMG_7732.jpg" alt="Katie Massman" width="200" height="300">
+    
+    <!-- Additional paragraph -->
+    <div class="clearfix">
+        <p class="description">hey there! i'm a rising junior at the university of notre dame, majoring in computer science with a minor in digital marketing. i have taken classes in data structures, systems programming, computer architecture, discrete mathmatics and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for internship roles in fullstack or frontend development within a dynamic environment that thrives on tackling new challenges.</p>
+    </div>
 
+    <script>
+        // JavaScript to continuously type out the text "Welcome to my website"
+        var text = "welcome to my website";
+        var textContainer = document.querySelector('.typewriter-text');
+
+        function type() {
+            var index = 0;
+            setInterval(function() {
+                if (index < text.length) {
+                    textContainer.textContent += text.charAt(index);
+                    index++;
+                } else {
+                    setTimeout(function() {
+                        textContainer.textContent = ''; // Reset text container
+                        index = 0;
+                    }, 2000); // Delay before resetting
+                }
+            }, 100); // Adjust the typing speed (in milliseconds)
+        }
+
+        type();
+    </script>
 </body>
-</html>
+</html> 
