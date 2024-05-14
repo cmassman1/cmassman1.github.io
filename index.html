@@ -47,7 +47,6 @@
         }
 
         /* Typewriter animation */
-        /* Typewriter animation */
         .typewriter-text {
             overflow: hidden; /* Ensures the text is hidden when it's too long */
             white-space: nowrap; /* Prevents text from wrapping */
@@ -56,7 +55,7 @@
             background-color: lightyellow; /* Add background color to typewriter text */
             display: inline-block;
             margin-bottom: 20px; /* Add margin below the typewriter text */
-            animation: typewriter 5s steps(22) infinite; /* Apply the animation */
+            animation: blink-caret 1s step-end infinite, typewriter 5s steps(22) infinite; /* Apply the animation */
             max-width: fit-content; /* Ensure yellow background only extends as far as the text */
         }
 
@@ -65,20 +64,26 @@
             from { width: 0 }
             to { width: 100% }
         }
+        
+        /* Define caret blinking animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange }
+        }
 
         /* Image styling */
         .profile-image {
             width: 400px; /* Make the image larger */
             height: auto; /* Maintain aspect ratio */
             float: left; /* Float the image to the left */
-            margin-right: 20px; /* Add some space between image and paragraph */
+            margin-right: 10px; /* Reduce space between image and paragraph */
         }
 
         /* Additional paragraph */
         .description {
             margin-top: 0;
             text-align: left;
-            max-width: calc(50% - 220px); /* Calculate the maximum width for the paragraph */
+            max-width: calc(50% - 210px); /* Calculate the maximum width for the paragraph */
             background-color: lightyellow; /* Add background color to the paragraph */
             padding: 10px; /* Add padding to the paragraph */
             float: right; /* Float the paragraph to the right */
