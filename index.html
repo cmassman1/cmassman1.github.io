@@ -79,13 +79,6 @@
             display: inline-block; /* Set display to inline-block */
         }
 
-        /* Container for image and description */
-        .image-container {
-            display: flex; /* Use flexbox */
-            align-items: flex-start; /* Align items to the start (left) of the flex container */
-            margin-bottom: 20px; /* Add margin below the image */
-        }
-
         /* Additional paragraph */
         .description {
             margin-top: 0;
@@ -94,7 +87,6 @@
             background-color: lightyellow; /* Add background color to the paragraph */
             display: inline-block; /* Set display to inline-block */
             vertical-align: top; /* Align the paragraph to the top of the line */
-        /*    width: calc(50% - 420px); /* Adjust the width to fit next to the image */
             max-width: 600px; /* Set a maximum width for the paragraph */
             margin-left: 100px; /* Adjust margin to move the paragraph slightly to the right */
         }
@@ -105,13 +97,22 @@
             clear: both;
             display: table;
         }
+
         /* Add some space between image and paragraph on larger screens */
-        @media (min-width: 768px) {
+        @media (max-width: 767px) {
+            .image-container {
+                flex-direction: column; /* Change flex direction to column for small screens */
+                align-items: center; /* Align items to the center */
+            }
+
+            .profile-image {
+                margin-bottom: 0; /* Remove bottom margin for image */
+            }
+
             .description {
-                margin-top: 0;
+                margin-left: 0; /* Remove left margin for paragraph */
             }
         }
-
     </style>
 </head>
 <body>
