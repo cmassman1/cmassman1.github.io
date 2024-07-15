@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catherine “Katie” Massman's Resume</title>
     <style>
-        /* Remove extra white space and set font */
         body {
-            margin-left: 1in; /* Shift everything about an inch to the right */
-            margin-right: 1in; /* Shift everything about an inch to the left */
-            margin-top: 1in; /* Move everything down by an inch */
+            margin-left: 1in;
+            margin-right: 1in;
+            margin-top: 1in;
             padding: 0;
-            font-family: 'Courier New', Courier, monospace; /* Change font to monospace */
-            background-color: lightblue; /* Change the background color */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: lightblue;
         }
         h1, h2, h3, p {
             margin-top: 0.5em;
             margin-bottom: 0.5em;
-            text-transform: lowercase; /* Convert text to lowercase */
+            text-transform: lowercase;
         }
         .section {
             border: 2px solid black;
@@ -45,38 +44,39 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            text-align: right; /* Align links to the right */
+            text-align: right;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.8); /* Add a background color with some transparency */
-            padding: 10px; /* Add padding to the navigation menu */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
         }
-
         nav ul {
-            list-style-type: none; /* Remove bullet points from list */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-
         nav ul li {
-            display: inline; /* Display list items horizontally */
-            margin-left: 20px; /* Add some space between list items */
+            display: inline;
+            margin-left: 20px;
             margin-right: 20px;
+        }
+        details {
+            margin-bottom: 1em;
         }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">home</a></li> <!-- Change Home to Main -->
-            <li><a href="about.html">experience</a></li> <!-- Link to the about page -->
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">experience</a></li>
         </ul>
     </nav>
 
-    <div class="section education">
-        <h1>catherine “katie” massman</h1>
-        <p>cmassman@nd.edu | linkedin: <a href="https://www.linkedin.com/in/catherinemassman-nd">catherine massman linkedin</a> | 816-499-1551</p>
+    <h1>catherine “katie” massman</h1>
+    <p>cmassman@nd.edu | linkedin: <a href="https://www.linkedin.com/in/catherinemassman-nd">catherine massman linkedin</a> | 816-499-1551</p>
 
-        <h2>education</h2>
+    <details class="section education">
+        <summary><h2>education</h2></summary>
         <p><strong>university of notre dame</strong> | notre dame, in | may 2026</p>
         <p>bachelor of science | major: computer science engineering | minor: engineering corporate practice, digital marketing</p>
         <p><strong>related coursework:</strong> data structures, discrete mathematics, computer architecture, systems programming, linear algebra</p>
@@ -84,9 +84,10 @@
         <p>engineering study abroad program</p>
         <p><strong>st. teresa’s academy</strong> | kansas city, mo | may 2022</p>
         <p>salutatorian</p>
-    </div>
-    <div class="section experience">
-        <h2>experience</h2>
+    </details>
+
+    <details class="section experience">
+        <summary><h2>experience</h2></summary>
         <p><strong>tim weninger lab</strong> | south bend, in | august 2024 - present </p>
         <p>research assistant</p>
         <ul>
@@ -98,9 +99,9 @@
             <li>establish connectivity and data mapping of 3rd party systems or Netsmart EHRs to enable data exchange.</li>
             <li>address requests for troubleshooting and configuration of solution architecture.</li>
         </ul>
-    <p><strong>student international business council, deloitte consulting</strong> | south bend, in | august 2023 – present</p>
-    <p>team member</p>
-    <ul>
+        <p><strong>student international business council, deloitte consulting</strong> | south bend, in | august 2023 – present</p>
+        <p>team member</p>
+        <ul>
             <li>worked on deloitte – given problem to help expand customer outreach and develop ai-driven solutions to enhance company’s ability to reach and engage new customers.</li>
         </ul>
         <p><strong>bella napoli</strong> | kansas city, mo | december 2021 – present</p>
@@ -109,9 +110,10 @@
             <li>provided excellent customer service in an upscale, privately-owned restaurant.</li>
             <li>managed dining room staff, planned service workflows, and handled patron reservations.</li>
         </ul>
-    </div>
-    <div class="section leadership">
-        <h2>leadership and activities</h2>
+    </details>
+
+    <details class="section leadership">
+        <summary><h2>leadership and activities</h2></summary>
         <p><strong>student government, executive cabinet</strong> | south bend, in | august 2022 – present</p>
         <p>communications committee</p>
         <ul>
@@ -135,20 +137,21 @@
             <li>led the promotion committee, responsible for designing and managing social media platforms.</li>
             <li>compiled and shared student-generated content on social media.</li>
         </ul>
-    </div>
+    </details>
 
-    <div class="section related">
-        <h2>projects</h2>
+    <details class="section related">
+        <summary><h2>projects</h2></summary>
         <p><strong>engineering design</strong> | university of notre dame | october 2022-december 2022</p>
         <p>designed and developed a data visualization app using matlab to illustrate the wage gap.</p>
-    </div>
+    </details>
 
-    <div class="section skills">
-        <h2>skills</h2>
+    <details class="section skills">
+        <summary><h2>skills</h2></summary>
         <ul>
             <li>technical skills: proficient in python, c, c++, matlab, adobe spark, adobe illustrator</li>
             <li>software/ systems: linux, terminal, vim</li>
         </ul>
-    </div>
+    </details>
 </body>
 </html>
+
