@@ -113,8 +113,7 @@
         /* Container for the images and captions */
         .image-gallery {
             display: flex;
-            justify-content: center; /* Center the gallery */
-            gap: 20px; /* Add space between images */
+            justify-content: space-around; /* Spread the images evenly */
             margin-top: 20px; /* Add margin above the gallery */
         }
 
@@ -123,12 +122,12 @@
         }
 
         .gallery-item img {
-            width: 150px; /* Set a fixed width for the gallery images */
+            width: 250px; /* Set a larger fixed width for the gallery images */
             height: auto; /* Maintain aspect ratio */
         }
 
         .gallery-item p {
-            margin-top: 5px; /* Add a small margin above the captions */
+            margin-top: 10px; /* Add a small margin above the captions */
             font-size: 16px; /* Set a smaller font size for captions */
         }
 
@@ -158,44 +157,45 @@
                 flex-direction: column; /* Stack images vertically on small screens */
                 gap: 10px; /* Reduce gap between images */
             }
+
+            .gallery-item img {
+                width: 100%; /* Make images responsive on small screens */
+                max-width: 250px; /* Ensure images do not exceed original size */
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">home</a></li> <!-- Change Home to Main -->
-            <li><a href="about.html">experience</a></li> <!-- Link to the about page -->
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">experience</a></li>
         </ul>
     </nav>
     <div class="main-content clearfix">
-        <h1>katie massman</h1> <!-- Make text lowercase -->
+        <h1>katie massman</h1>
         
-        <!-- Welcome message -->
         <p><span class="typewriter-text">welcome to my website</span></p>
-    <div class="image-container">
-        <!-- Add your image -->
-        <img class="profile-image" src="IMG_0074.jpg" alt="Katie Massman">
-
-        <!-- Additional paragraph -->
-        <div class="description">
-            <p>hello! i'm a rising junior at the university of notre dame, majoring in computer science with a minor in digital marketing. i have taken classes in data structures, systems programming, computer architecture, discrete mathematics, and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for internship roles in full-stack or front-end development within a dynamic environment that thrives on tackling new challenges.</p>
+        <div class="image-container">
+            <img class="profile-image" src="IMG_0074.jpg" alt="Katie Massman">
+            <div class="description">
+                <p>hello! i'm a rising junior at the university of notre dame, majoring in computer science with a minor in digital marketing. i have taken classes in data structures, systems programming, computer architecture, discrete mathematics, and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for internship roles in full-stack or front-end development within a dynamic environment that thrives on tackling new challenges.</p>
+            </div>
+        </div>
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="IMG_4304.jpeg" alt="Placeholder 1">
+                <p>I am obsessed with coffee (here's my katieluvcoffee plug) and my labrador, Rockne. Here are both of them in one adorable photo. </p>
+            </div>
+            <div class="gallery-item">
+                <img src="chiefs.png" alt="Placeholder 2">
+                <p>Here is my family - my older brother, sister, and little sister. We all grew up in Kansas City, so naturally I had to include us in our natural habitat, a chiefs game.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="runningpic.png" alt="Placeholder 3">
+                <p>Outside of the classroom and workplace, I'm a very avid reader, sub-par golfer, and mediocre runner (but improving!) </p>
+            </div>
         </div>
     </div>
-    <div class="image-gallery">
-        <div class="gallery-item">
-            <img src="IMG_4304.jpeg" alt="Placeholder 1">
-            <p>Caption for Photo 1</p>
-        </div>
-        <div class="gallery-item">
-            <img src="chiefs.png" alt="Placeholder 2">
-            <p>Caption for Photo 2</p>
-        </div>
-        <div class="gallery-item">
-            <img src="runningpic.png" alt="Placeholder 3">
-            <p>Caption for Photo 3</p>
-        </div>
-    </div>
-</div>
 </body>
 </html>
