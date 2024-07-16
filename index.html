@@ -3,188 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Catherine “Katie” Massman's Resume</title>
     <style>
-        /* Remove extra white space and set font */
         body {
-            margin: 0;
+            margin-left: 1in;
+            margin-right: 1in;
+            margin-top: 1in;
             padding: 0;
-            font-family: 'Courier New', Courier, monospace; /* Change font to monospace */
-            background-color: lightblue; /* Keep the background color */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: lightblue;
         }
-
-        /* Style for navigation menu */
+        h1, h2, h3, p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            text-transform: lowercase;
+        }
+        .section {
+            border: 2px solid black;
+            padding: 10px;
+            margin-top: 0.5em;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+        }
+        .education {
+            background-color: #ffcccc;
+        }
+        .leadership {
+            background-color: #ccffcc;
+        }
+        .experience {
+            background-color: #ccccff;
+        }
+        .related {
+            background-color: #ffffcc;
+        }
+        .skills {
+            background-color: #ccffff;
+        }
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .education .box {
+            background-color: #ffe6e6;
+        }
+        .leadership .box {
+            background-color: #e6ffe6;
+        }
+        .experience .box {
+            background-color: #e6e6ff;
+        }
+        .related .box {
+            background-color: #ffffe6;
+        }
+        .skills .box {
+            background-color: #e6ffff;
+        }
         nav {
             position: fixed;
             top: 20px;
             right: 20px;
-            text-align: right; /* Align links to the right */
+            text-align: right;
             z-index: 1000;
-            padding: 10px; /* Add padding to the navigation menu */
+            padding: 10px;
         }
-
         nav ul {
-            list-style-type: none; /* Remove bullet points from list */
-            padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-
         nav ul li {
-            display: inline; /* Display list items horizontally */
-            margin-left: 20px; /* Add some space between list items */
-            margin-right: 20px;
+            display: inline;
+            margin-left: 10px;
+            margin-right: 10px;
         }
-
         nav ul li a {
-            font-size: 24px; /* Increase font size */
-            text-decoration: none; /* Remove underline from links */
-            color: black; /* Set link color */
-            padding: 10px 20px; /* Add padding to make it look like a button */
-            border: 2px solid black; /* Add a border */
-            border-radius: 5px; /* Round the corners */
-            background-color: pink; /* Add a background color */
-            transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
+            font-size: 20px; /* Decrease font size */
+            text-decoration: none;
+            color: black;
+            padding: 5px 15px; /* Decrease padding */
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: pink;
+            transition: background-color 0.3s, color 0.3s;
         }
-
         nav ul li a:hover {
-            background-color: darkgray; /* Change background color on hover */
-            color: white; /* Change text color on hover */
+            background-color: darkgray;
+            color: white;
         }
-
-        /* Center the main content */
-        .main-content {
-            text-align: center;
-            margin-top: 100px; /* Adjust as needed */
-            max-width: 1200px; /* Set a max width for the content */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Style for the header */
-        h1 {
-            font-size: 60px; /* Larger font size for header */
-            margin-top: 0;
-        }
-
-        /* Typewriter animation */
-        .typewriter-text {
-            overflow: hidden; /* Ensures the text is hidden when it's too long */
-            white-space: nowrap; /* Prevents text from wrapping */
-            border-right: .15em solid orange; /* Add a border to simulate cursor */
-            padding-right: 3px; /* Add padding to ensure cursor is visible */
-            background-color: lightyellow; /* Add background color to typewriter text */
-            display: inline-block;
-            margin-bottom: 20px; /* Add margin below the typewriter text */
-            animation: blink-caret 1s step-end infinite, typewriter 5s steps(22) infinite; /* Apply the animation */
-            max-width: fit-content; /* Ensure yellow background only extends as far as the text */
-            font-size: 24px; /* Increase font size */
-        }
-
-        /* Define the typewriter animation */
-        @keyframes typewriter {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        /* Define caret blinking animation */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange }
-        }
-
-        /* Image styling */
-        .profile-image {
-            width: 400px; /* Make the image larger */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 20px; /* Add margin below the image */
-            display: inline-block; /* Set display to inline-block */
-        }
-
-        /* Additional paragraph */
-        .description {
-            margin-top: 0;
-            text-align: left;
-            padding: 20px; /* Add padding for better readability */
-            background-color: lightyellow; /* Add background color to the paragraph */
-            display: inline-block; /* Set display to inline-block */
-            vertical-align: top; /* Align the paragraph to the top of the line */
-            max-width: 600px; /* Set a maximum width for the paragraph */
-            margin-left: 100px; /* Adjust margin to move the paragraph slightly to the right */
-            font-size: 20px; /* Increase font size */
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .more-about-me {
-            background-color: lightyellow; /* Match the other yellow color */
-            padding: 20px; /* Add padding */
-            margin-top: 20px; /* Add margin above */
-            border-radius: 5px; /* Add rounded corners */
-            font-size: 24px; /* Increase font size */
-            text-align: center; /* Center the text */
-            margin-bottom: 20px; /* Add margin below */
-        }
-
-        /* Container for the images and captions */
-        .image-gallery {
-            display: flex;
-            justify-content: space-around; /* Spread the images more evenly */
-            margin-top: 20px; /* Add margin above the gallery */
-            gap: 60px; /* Add more space between images */
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .gallery-item {
-            text-align: center;
-            flex: 1; /* Make sure items grow equally */
-            max-width: 250px; /* Limit the width */
-        }
-
-        .gallery-item img {
-            width: 100%; /* Make images responsive */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .gallery-item p {
-            margin-top: 10px; /* Add a small margin above the captions */
-            font-size: 16px; /* Set a smaller font size for captions */
-            background-color: pink; /* Add pink background color to captions */
-            padding: 10px; /* Add padding to the captions */
-            border-radius: 5px; /* Add rounded corners to the captions */
-        }
-
-        /* Clear floating elements */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Add some space between image and paragraph on larger screens */
-        @media (max-width: 767px) {
-            .image-container {
-                flex-direction: column; /* Change flex direction to column for small screens */
-                align-items: center; /* Align items to the center */
-            }
-
-            .profile-image {
-                margin-bottom: 0; /* Remove bottom margin for image */
-            }
-
-            .description {
-                margin-left: 0; /* Remove left margin for paragraph */
-            }
-
-            .image-gallery {
-                flex-direction: column; /* Stack images vertically on small screens */
-                gap: 10px; /* Reduce gap between images */
-            }
+        details {
+            margin-bottom: 1em;
         }
     </style>
 </head>
@@ -195,33 +104,98 @@
             <li><a href="about.html">experience</a></li>
         </ul>
     </nav>
-    <div class="main-content clearfix">
-        <h1>katie massman</h1>
-        
-        <p><span class="typewriter-text">welcome to my website</span></p>
-        <div class="image-container">
-            <img class="profile-image" src="IMG_0074.jpg" alt="Katie Massman">
-            <div class="description">
-                <p>hello! i'm a rising junior at the university of notre dame, majoring in computer science with a minor in digital marketing. i have taken classes in data structures, systems programming, computer architecture, discrete mathematics, and linear algebra. right now, i'm eager to continue learning and grow professionally. i'm on the lookout for internship roles in full-stack or front-end development within a dynamic environment that thrives on tackling new challenges.</p>
-            </div>
+
+    <h1>catherine “katie” massman</h1>
+    <p>cmassman@nd.edu | 816-499-1551 | LinkedIn: <a href="https://www.linkedin.com/in/catherinemassman-nd">/catherinemassman-nd</a> | Git: <a href="https://github.com/cmassman1">/cmassman1</a></p>
+
+    <details class="section skills">
+        <summary><h2>technology & skills</h2></summary>
+        <div class="box">
+            <p><strong>Technical Skills & Tools:</strong> Python, C, C++, JavaScript, MySQL, Matlab, Adobe Creative Suite, UiPath, Dbeaver</p>
         </div>
-        <div class="more-about-me">
-            more about me...
+        <div class="box">
+            <p><strong>Software/Systems:</strong> Linux, Terminal, Vim, VSCode</p>
         </div>
-        <div class="image-gallery">
-            <div class="gallery-item">
-                <img src="IMG_4304.jpeg" alt="Placeholder 1">
-                <p>I am obsessed with coffee (here's my <a href="https://www.instagram.com/katieluvcoffee/" target="_blank">katieluvcoffee</a> plug) and my labrador, Rockne. Here are both of them in one adorable photo.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="chiefs.png" alt="Placeholder 2">
-                <p>Pictured here is my family - my parents, older brother, older sister, and little sister. We all grew up in Kansas City, so naturally I had to include us in our natural habitat, a chiefs game.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="runningpic.png" alt="Placeholder 3">
-                <p>Outside of the classroom and workplace, I'm a very avid reader, sub-par golfer, and mediocre runner (but improving!)</p>
-            </div>
+    </details>
+
+    <details class="section education">
+        <summary><h2>education</h2></summary>
+        <div class="box">
+            <p><strong>University of Notre Dame</strong> | Notre Dame, IN | May 2026</p>
+            <p>B.S. Computer Science, Minors in Engineering Corporate Practice and Digital Marketing</p>
+            <p><strong>Related Coursework:</strong> Data Structures, Algorithms, Computer Architecture, Systems Programming, Linear Algebra</p>
         </div>
-    </div>
+        <div class="box">
+            <p><strong>Notre Dame Global Gateway</strong> | Rome, Italy | Summer 2023</p>
+            <p>Engineering Study Abroad Program</p>
+        </div>
+    </details>
+
+    <details class="section experience">
+        <summary><h2>relevant experience</h2></summary>
+        <div class="box">
+            <p><strong>Weninger Lab</strong> | Kansas City, MO | June 2024– Present</p>
+            <p>Undergraduate Research Assistant</p>
+            <p>Assisted CSE professor in projects intersecting AI, social media systems, machine learning, and graph theory.</p>
+        </div>
+        <div class="box">
+            <p><strong>Netsmart</strong> | Kansas City, MO | June 2024– Present</p>
+            <p>Technical Analyst</p>
+            <p>Established data mapping between third-party systems and Netsmart EHRs using SQL and Dbeaver.</p>
+            <p>Developed business plan for consulting unit to automate roughly 10,000 hours of manual work using UiPath.</p>
+        </div>
+        <div class="box">
+            <p><strong>Student International Business Council, Deloitte Consulting</strong> | South Bend, IN | August 2023 – December 2023</p>
+            <p>Team Member</p>
+            <p>Formulated an action plan for a shoe company startup to utilize AI and machine learning to expand customer outreach and engagement.</p>
+        </div>
+        <div class="box">
+            <p><strong>Bella Napoli</strong> | Kansas City, MO | December 2021 – August 2023</p>
+            <p>Waitress / Hostess</p>
+            <p>Managed dining room staff, planned service workflows, and handled patron reservations.</p>
+        </div>
+    </details>
+
+    <details class="section related">
+        <summary><h2>relevant projects</h2></summary>
+        <div class="box">
+            <p><strong>SocialConnect App</strong> | Canva AI Hackathon | June 2024</p>
+            <p>Developed an API using Node.js and React.js for developers to connect various social media platforms.</p>
+        </div>
+        <div class="box">
+            <p><strong>Engineering Design App</strong> | University of Notre Dame | October 2022 – December 2022</p>
+            <p>Designed and developed a data visualization app using Matlab to illustrate the gender wage gap.</p>
+        </div>
+        <div class="box">
+            <p><strong>This Website!</strong></p>
+            <p>utilized HTML, CSS, JavaScript to handle DOM manipulation and JSON for data handling</p>
+        </div>
+    </details>
+
+    <details class="section leadership">
+        <summary><h2>leadership and activities</h2></summary>
+        <div class="box">
+            <p><strong>Student Government, Executive Cabinet</strong> | South Bend, IN | August 2022 – Present</p>
+            <p>Communications Committee</p>
+            <p>Designed and managed social media content across multiple platforms to promote student government initiatives.</p>
+            <p>Contributed to Student Government initiatives related to student well-being.</p>
+        </div>
+        <div class="box">
+            <p><strong>FUEL, First Undergraduate Experience with Leadership</strong></p>
+            <p>Developed and implemented a system to simplify finding accessible food options on campus at any time of day.</p>
+            <p>Collaborated with University Staff to enhance student life in multiple areas, with an emphasis on well-being.</p>
+        </div>
+        <div class="box">
+            <p><strong>Hall Promotion and Media Committee</strong> | South Bend, IN | August 2023 – Present</p>
+            <p>Chair of Committee</p>
+            <p>Led the promotion committee responsible for social media management and content sharing.</p>
+            <p>Compiled and shared student-generated content on social media.</p>
+        </div>
+        <div class="box">
+            <p><strong>The Shirt ND</strong> | South Bend, IN | August 2022 – June 2024</p>
+            <p>Communications Team</p>
+            <p>Produced social media content promoting The Shirt to students and alumni, reaching over 160,000 people annually and raising over $17,000 for student clubs and organizations.</p>
+        </div>
+    </details>
 </body>
 </html>
