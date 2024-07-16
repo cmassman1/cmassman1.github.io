@@ -113,16 +113,19 @@
         /* Container for the images and captions */
         .image-gallery {
             display: flex;
-            justify-content: space-around; /* Spread the images evenly */
+            justify-content: center; /* Center the gallery */
             margin-top: 20px; /* Add margin above the gallery */
+            gap: 30px; /* Add space between images */
         }
 
         .gallery-item {
             text-align: center;
+            flex: 1; /* Make sure items grow equally */
+            max-width: 250px; /* Limit the width */
         }
 
         .gallery-item img {
-            width: 250px; /* Set a larger fixed width for the gallery images */
+            width: 100%; /* Make images responsive */
             height: auto; /* Maintain aspect ratio */
         }
 
@@ -157,11 +160,6 @@
                 flex-direction: column; /* Stack images vertically on small screens */
                 gap: 10px; /* Reduce gap between images */
             }
-
-            .gallery-item img {
-                width: 100%; /* Make images responsive on small screens */
-                max-width: 250px; /* Ensure images do not exceed original size */
-            }
         }
     </style>
 </head>
@@ -185,15 +183,15 @@
         <div class="image-gallery">
             <div class="gallery-item">
                 <img src="IMG_4304.jpeg" alt="Placeholder 1">
-                <p>I am obsessed with coffee (here's my katieluvcoffee plug) and my labrador, Rockne. Here are both of them in one adorable photo. </p>
+                <p>Caption for Photo 1</p>
             </div>
             <div class="gallery-item">
                 <img src="chiefs.png" alt="Placeholder 2">
-                <p>Here is my family - my older brother, sister, and little sister. We all grew up in Kansas City, so naturally I had to include us in our natural habitat, a chiefs game.</p>
+                <p>Caption for Photo 2</p>
             </div>
             <div class="gallery-item">
                 <img src="runningpic.png" alt="Placeholder 3">
-                <p>Outside of the classroom and workplace, I'm a very avid reader, sub-par golfer, and mediocre runner (but improving!) </p>
+                <p>Caption for Photo 3</p>
             </div>
         </div>
     </div>
